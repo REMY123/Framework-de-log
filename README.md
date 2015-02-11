@@ -17,7 +17,7 @@
 ####A faire : 
     - architecture des cibles
     - API de logging
-    - règles de priorité des logs
+    - règles de priorité des logs (DEBUG < INFO < ERROR)
     - identification d'un logger
     - configuration du framework
     - spécification du framework de logging
