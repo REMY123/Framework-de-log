@@ -2,7 +2,7 @@
 
 ###Objectif : Concevoir et développer un framework de logging.
 
-#####Un même message peut donner lieu à plusieurs "cibles":
+####Un même message peut donner lieu à plusieurs "cibles":
     - une trace dans la console
     - une ligne dans un fichier
     - un enregistrement dans une base de donnée
