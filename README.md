@@ -22,3 +22,6 @@
     - configuration du framework
     - spécification du framework de logging
     - respecter les règles de design Objet
+
+
+Contributeurs : [@REMY123](https://github.com/REMY123), [@bayakissa](https://github.com/bayakissa), [@hamza0208](https://github.com/hamza0208)
