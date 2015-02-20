@@ -1,6 +1,6 @@
 package fr.logger.com;
 
-import java.util.*;
+import java.util.Date;
 import java.text.*;
 
 public class Main {
