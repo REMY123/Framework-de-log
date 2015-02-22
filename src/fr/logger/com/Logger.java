@@ -22,7 +22,7 @@ public class Logger {
 		
 	}
 	
-static void info(String message){
+	static void info(String message){
 		
 		
 		for(int i=0;i<tabLevel.length;i++)
@@ -37,7 +37,7 @@ static void info(String message){
 	}
 
 
-static void debug(String message){
+	static void debug(String message){
 	
 	
 	for(int i=0;i<tabLevel.length;i++)
@@ -50,6 +50,18 @@ static void debug(String message){
 	}
 	
 }
+	
+	static void defaultStettings(){
+		
+		Level.defaultLevel();
+		
+		}
+	
+	static void changeLevel(String level,String Inf,String Sup){
+		
+		Level.changeLevel(level, Inf, Sup);
+		
+	}
 	
 	
 	

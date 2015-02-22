@@ -7,7 +7,7 @@ public class Main {
 	
 	   
 	    
-	    Logger.info("l,lknlknlknlknlcoco");
+	    Logger.info("RRRRRRRRRRR");
 	    
 	   }
 }
