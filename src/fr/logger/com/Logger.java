@@ -1,12 +1,15 @@
 package fr.logger.com;
 
+import java.util.HashSet;
+import java.util.Iterator;
+
 
 
 public class Logger {
 	
 	public static String [][] tabLevel= {{"DEBUG","1"},{"INFO","2"},{"ERROR","3"}};
 	public static String [][] Copy = {{"DEBUG","1"},{"INFO","2"},{"ERROR","3"}};
-	
+	public static HashSet<String> hs = new HashSet<String>();
 	
 	static void error(String message){
 		
@@ -63,7 +66,31 @@ public class Logger {
 		
 	}
 	
+	static void ajoutCible(String cible){
+		hs.add(cible);
+		
+	}
 	
+	static void deleteCible(String cible){
+		
+		Iterator<String> iter = hs.iterator();
+		while (iter.hasNext()) {
+		  String element = iter.next();
+		  if ( element.equals(cible)) {
+		    iter.remove();
+		  }
+		}
+		
+		
+		
+	}
+	
+	public static void afficheCible()
+	{
+		Iterator<String> it = hs.iterator();
+		 while(it.hasNext())
+		      {System.out.println(it.next());}
+	}
 	
 	
 }
