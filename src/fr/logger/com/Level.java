@@ -1,8 +1,22 @@
 package fr.logger.com;
 
-import java.util.Random;
+//import java.util.Random;
 
+public enum Level{
+	DEBUG, INFO, ERROR;
 
+	public static Level fromString(String text) {
+		   if (text != null) {
+		     for (Level b : Level.values()) {
+		       if (text.equalsIgnoreCase(b.name())) {
+		         return b;
+		       }
+		     }
+		   }
+		   return null;
+		 }
+}
+/*
 public class Level extends Logger {
 	
 	public static void changeLevel(String level,String Inf,String Sup)
@@ -135,4 +149,4 @@ public class Level extends Logger {
 		}
 	}
 
-}
+}*/
