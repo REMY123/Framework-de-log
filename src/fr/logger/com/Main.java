@@ -16,11 +16,9 @@ public class Main {
 	    Logger.ajoutCible("D");
 	    Logger.deleteCible("D");
 	    Logger.afficheCible();*/
-		
+		/*
 		logger.error("Test premier ");
-		logger.error("Test premier ");
-		logger.error("Test premier ");
-		logger.error("Test premier ");
+	*/
 		
 	    
 	   }

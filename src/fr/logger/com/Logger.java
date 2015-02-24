@@ -1,21 +1,25 @@
 package fr.logger.com;
 
+import java.util.LinkedList;
+
 
 
 public class Logger {
 
 	public Level level;
-	public Cible cible;
+	public LinkedList<Cible> cibles;
+	
 	private String className;
 
 	public Logger(Class<?> maClasse) {
 		this.className = maClasse.getCanonicalName();
+		this.cibles = new LinkedList<Cible>();
 
 	}
 
 
-	public void setCible(Cible cible) {
-		this.cible = cible;
+	public void addCible(Cible cible) {
+		cibles.add(cible);
 	}
 
 
@@ -27,7 +31,7 @@ public class Logger {
 		this.level = level;
 	}
 
-	public void error(String message){
+	/*public void error(String message){
 		try {
 			if(this.cible.getClass().getCanonicalName().equalsIgnoreCase(ConsoleCible.class.getCanonicalName())) {
 				this.cible.Envoyer(message, this.className);
@@ -41,7 +45,7 @@ public class Logger {
 	
 		//Formateur.setLevel(Level.ERROR);
 
-	}
+	}*/
 
 	static void info(String message){
 
