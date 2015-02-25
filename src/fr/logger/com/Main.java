@@ -1,25 +1,42 @@
 package fr.logger.com;
 
-import java.util.Map;
-
 public class Main {
 	
-	public static void main (String[] args){
+	public static void main(String[] args) {
 		
-		Logger logger = new Logger(Main.class);
-		//logger.setCible(new ConsoleCible());
-	    
-		/*
-		Logger.ajoutCible("A");
-	    Logger.ajoutCible("B");
-	    Logger.ajoutCible("C");
-	    Logger.ajoutCible("D");
-	    Logger.deleteCible("D");
-	    Logger.afficheCible();*/
-		/*
-		logger.error("Test premier ");
-	*/
 		
-	    
-	   }
+		//Createur.getlog(Main.class);
+		
+		Logger log = Createur.getlog(Main.class);
+		
+		Level lev = Level.DEBUG;
+		
+		Cible c= new Cible();
+		Cible d= new Cible();
+		c.message="okkokokokok";
+		
+		Config.level(Main.class, lev);
+		System.out.println(log.level);
+		log.error("ok");
+		System.out.println(log.level);
+		Config.addCible(Main.class,c );
+		Config.addCible(Main.class,c );
+		Config.addCible(Main.class,c );
+		Config.addCible(Main.class,d );
+		
+		log.error("ok");
+		
+		System.out.println(log.classe);
+		System.out.println(log.cibles);
+		
+		
+		
+		
+		
+		
+	
+		
+		
+	}
+
 }

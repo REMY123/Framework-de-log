@@ -5,23 +5,43 @@ import java.util.LinkedList;
 
 
 public class Logger {
-
+	public Class<?> classe;
 	public Level level;
 	public LinkedList<Cible> cibles;
 	
-	private String className;
 
 	public Logger(Class<?> maClasse) {
-		this.className = maClasse.getCanonicalName();
+		this.classe = maClasse;
 		this.cibles = new LinkedList<Cible>();
-
+		
 	}
 
 
-	public void addCible(Cible cible) {
+	/*public  void setClass(Class<?> maClasse) {
+		this.classe  = maClasse;
+
+	}*/
+	
+	public Class<?> getClasse() {
+		return classe;
+	}
+
+
+
+
+
+	public LinkedList<Cible> getCibles() {
+		return cibles;
+	}
+
+
+
+	public void setCible(Cible cible) {
 		cibles.add(cible);
 	}
-
+		
+	
+	
 
 	public Level getLevel() {
 		return level;
@@ -31,32 +51,27 @@ public class Logger {
 		this.level = level;
 	}
 
-	/*public void error(String message){
-		try {
-			if(this.cible.getClass().getCanonicalName().equalsIgnoreCase(ConsoleCible.class.getCanonicalName())) {
-				this.cible.Envoyer(message, this.className);
-			}
-		}
-		catch(Exception e) {
-			this.cible = new ConsoleCible();
-			this.cible.Envoyer(message, this.className);
-		}
+	
 		
 	
-		//Formateur.setLevel(Level.ERROR);
+	
+		public void error(String message){
+		this.setLevel(Level.ERROR);
+		
+			
+		}
+		
+		public void info(String message){
+			this.setLevel(Level.INFO);
+			
+		}
 
-	}*/
-
-	static void info(String message){
-
-
+		public void debug(String message){
+			this.setLevel(Level.DEBUG);
+			
+		}
+	
+		
 	}
 
-
-	static void debug(String message){
-
-
-
-
-	}
-}
+	
