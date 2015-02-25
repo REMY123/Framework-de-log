@@ -7,7 +7,7 @@ public class Config {
 	}
 	
 	
-   public static void addCible(Class<?> classe , Cible cible){
+   public static void addCible(Class<?> classe , String cible){
 	   
 	   Createur.getlog(classe).setCible(cible);
 	}

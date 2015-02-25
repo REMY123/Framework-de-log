@@ -1,4 +1,4 @@
-package fr.logger.com;
+/*package fr.logger.com;
 
 public class Message extends Logger{
 	
@@ -18,5 +18,5 @@ public class Message extends Logger{
 	}
 	
 	
-}
+}*/
 

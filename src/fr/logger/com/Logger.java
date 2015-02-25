@@ -1,5 +1,6 @@
 package fr.logger.com;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 
 
@@ -7,12 +8,11 @@ import java.util.LinkedList;
 public class Logger {
 	public Class<?> classe;
 	public Level level;
-	public LinkedList<Cible> cibles;
-	
+	//public LinkedList<String> cibles;
+	public static HashSet<String> cibles= new HashSet<String>();
 
 	public Logger(Class<?> maClasse) {
 		this.classe = maClasse;
-		this.cibles = new LinkedList<Cible>();
 		
 	}
 
@@ -30,13 +30,11 @@ public class Logger {
 
 
 
-	public LinkedList<Cible> getCibles() {
-		return cibles;
-	}
+	
 
 
-
-	public void setCible(Cible cible) {
+	public void setCible(String cible) {
+		
 		cibles.add(cible);
 	}
 		

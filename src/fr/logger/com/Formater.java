@@ -1,4 +1,4 @@
-package fr.logger.com;
+/*package fr.logger.com;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -61,3 +61,4 @@ public class Formater extends Logger {
 	    
 	}
 }
+*/

@@ -1,4 +1,4 @@
-package fr.logger.com;
+/*package fr.logger.com;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -16,5 +16,5 @@ public class Formateur extends Logger{
 		
 	}
 
-}
+}*/
 

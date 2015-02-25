@@ -1,4 +1,4 @@
-package fr.logger.com;
+/*package fr.logger.com;
 
 public class ConsoleCible extends Cible{
 
@@ -7,4 +7,4 @@ public class ConsoleCible extends Cible{
 		System.out.println("ERROR	|	" + className + "	|	" + message);
 	}
 
-}
+}*/

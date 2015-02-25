@@ -1,5 +1,8 @@
 package fr.logger.com;
 
+import java.util.HashSet;
+import java.util.Iterator;
+
 public class Main {
 	
 	public static void main(String[] args) {
@@ -10,27 +13,32 @@ public class Main {
 		Logger log = Createur.getlog(Main.class);
 		
 		Level lev = Level.DEBUG;
+		String cible1="a.txt";
+	
 		
-		Cible c= new Cible();
-		Cible d= new Cible();
-		c.message="okkokokokok";
 		
 		Config.level(Main.class, lev);
 		System.out.println(log.level);
 		log.error("ok");
 		System.out.println(log.level);
-		Config.addCible(Main.class,c );
-		Config.addCible(Main.class,c );
-		Config.addCible(Main.class,c );
-		Config.addCible(Main.class,d );
+		Config.addCible(Main.class,cible1 );
+		Config.addCible(Main.class,cible1);
+		Config.addCible(Main.class,cible1 );
+		Config.addCible(Main.class,cible1 );
+		Config.addCible(Main.class,"okok" );
 		
 		log.error("ok");
 		
 		System.out.println(log.classe);
-		System.out.println(log.cibles);
+		
+		HashSet<String> hs = Logger.cibles;
+		Iterator<String> iter = hs.iterator();
+		while (iter.hasNext()) {
+			  						String element = iter.next();
+		  }
 		
 		
-		
+	  
 		
 		
 		
