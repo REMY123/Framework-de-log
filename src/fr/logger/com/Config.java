@@ -11,5 +11,10 @@ public class Config {
 	   
 	   Createur.getlog(classe).setCible(cible);
 	}
+   
+public static void properties(String fileName){
+	   
+	   
+	}
 
 }

@@ -35,6 +35,7 @@ public class Main {
 		Iterator<String> iter = hs.iterator();
 		while (iter.hasNext()) {
 			  						String element = iter.next();
+		System.out.println(element+";");
 		  }
 		
 		
