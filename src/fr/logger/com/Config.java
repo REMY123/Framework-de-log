@@ -1,6 +1,6 @@
 package fr.logger.com;
 
-import java.awt.Desktop;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,9 +38,9 @@ public static void properties(String fileName){
 	
 	
 	
-		// CrŽation du flux buffŽrisŽ sur un FileReader, immŽdiatement suivi par un 
+		// Crï¿½ation du flux buffï¿½risï¿½ sur un FileReader, immï¿½diatement suivi par un 
 		// try/finally, ce qui permet de ne fermer le flux QUE s'il le reader
-		// est correctement instanciŽ (Žvite les NullPointerException)
+		// est correctement instanciï¿½ (ï¿½vite les NullPointerException)
 	try{
 		BufferedReader buff = new BufferedReader(new FileReader(fileName));
 	}

@@ -9,7 +9,7 @@ public class Main {
 		
 		
 		//Createur.getlog(Main.class);
-		
+		// test
 		Logger log = Createur.getlog(Main.class);
 		
 		Level lev = Level.DEBUG;
