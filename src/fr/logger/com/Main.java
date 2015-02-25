@@ -14,7 +14,8 @@ public class Main {
 		
 		Level lev = Level.DEBUG;
 		String cible1="a.txt";
-	
+		
+		Config.properties(cible1);
 		
 		
 		Config.level(Main.class, lev);
