@@ -4,49 +4,43 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 public class Main {
-	
-	public static void main(String[] args) {
-		
-		
-		//Createur.getlog(Main.class);
-		// test
-		Logger log = Createur.getlog(Main.class);
-		
-		Level lev = Level.DEBUG;
-		String cible1="a.txt";
-		
-		Config.properties(cible1);
-		
-		
-		Config.level(Main.class, lev);
-		System.out.println(log.level);
-		log.error("ok");
-		System.out.println(log.level);
-		Config.addCible(Main.class,cible1 );
-		Config.addCible(Main.class,cible1);
-		Config.addCible(Main.class,cible1 );
-		Config.addCible(Main.class,cible1 );
-		Config.addCible(Main.class,"okok" );
-		
-		log.error("ok");
-		
-		System.out.println(log.classe);
-		
-		HashSet<String> hs = Logger.cibles;
-		Iterator<String> iter = hs.iterator();
-		while (iter.hasNext()) {
-			  						String element = iter.next();
-		System.out.println(element+";");
-		  }
-		
-		
-	  
-		
-		
-		
-	
-		
-		
-	}
-
+    
+    public static void main(String[] args) throws ClassNotFoundException {
+        
+        
+        
+        
+        Logger log = Createur.getlog(Main.class); // creer un log
+        
+        
+        log.init();// initialisation du log avec valeur par defaut
+        
+        
+        //Config.properties("a.properties",log); // parametres du log depuis le fichier properties
+        
+        
+        
+        System.out.println(log.messageDebug);
+        System.out.println(log.messageError);
+        System.out.println(log.messageInfo);
+        System.out.println(log.level);
+        
+        
+        HashSet<String> hs = Logger.cibles;
+        Iterator<String> iter = hs.iterator();
+        while (iter.hasNext()) {
+            String element = iter.next();
+            System.out.println(element+" ");
+        }
+        
+        log.show();// pour lancer l'ecriture sur les cibles.
+        
+        
+        
+        
+        
+        
+        
+    }
+    
 }
