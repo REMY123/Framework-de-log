@@ -52,6 +52,7 @@ Config.properties(“cible.properties“ ,log);
 ```
 Le fichier properties doit avoir un format particulier:
 *ex*:
+```java
 Level = DEBUG
 Cible1=../../opaque.txt
 Cible2=opaque2.txt
@@ -61,6 +62,7 @@ RotatifCible3=ok.txt
 MessageInfo = c’est pour les infos 
 MessageError= c’est pour les erreurs
 MessageDebug= c’est pour les debug
+```
 
 Pour ajouter des cibles dans le fichier properties il faut donc écrire: Cible1=… si 
 une cible, Cible1=… Cible2=… si deux cibles, Cible1=… Cible2=… Cibles3 etc…
