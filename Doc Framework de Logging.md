@@ -19,11 +19,11 @@ Pous installer notre Framework vous pouvez télécharger le dernier release ici 
 Il vous faut télécharger le fichier .jar fourni.
 Une fois dans Eclipse, 
 
-*cliquez droit sur le nom de votre projet 
-*"Build Path"
-*"Add External Archives"
-*Dans le browser, choisissez le fichier .jar et ajoutez le à votre projet.
-*C'est fait !
+* cliquez droit sur le nom de votre projet 
+* "Build Path"
+* "Add External Archives"
+* Dans le browser, choisissez le fichier .jar et ajoutez le à votre projet.
+* C'est fait !
 
 
 
