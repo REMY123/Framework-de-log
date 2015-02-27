@@ -38,10 +38,10 @@ Notre framework de log est composé de 9 classes:
 
 #####Createur
 permet de créer un nouveau loger.
-ex de code:
-'''java 
+*ex de code*:
+```java 
 Logger log = Createur.getlog(Main.class);
-'''
+```
 
 #####Config
 Permet de configurer le log :
