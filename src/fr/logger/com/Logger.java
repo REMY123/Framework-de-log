@@ -3,7 +3,6 @@ package fr.logger.com;
 import java.util.HashSet;
 import java.util.Iterator;
 
-import com.sun.tools.javac.util.Log;
 
 public class Logger {
 	// Attributs
@@ -81,6 +80,17 @@ public class Logger {
 		this.level = level;
 	}
 
+	public void suppcibles(String cible) {
+		 
+		this.cibles.remove(cible);
+		
+}
+
+	public void suppciblesR(String cible) {
+		this.ciblesR.remove(cible);
+		
+	}
+	
 	// //////////////////////////
 
 	public void error(String message) {

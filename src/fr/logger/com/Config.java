@@ -34,6 +34,20 @@ public class Config {
 
 			Createur.getlog(classe).setCibleR(cible);
 		}
+		//supp cibles
+		public static void suppCible(Class<?> classe, String cible) {
+
+			Createur.getlog(classe).suppcibles(cible);
+			
+			
+				}
+		//supp cibles rotatives
+		public static void suppCibleR(Class<?> classe, String cible) {
+
+			Createur.getlog(classe).suppciblesR(cible);
+			
+			
+				}
 
 	// définit un formateur
 	public static void formateur(Class<?> classe, Formateur formateur) {

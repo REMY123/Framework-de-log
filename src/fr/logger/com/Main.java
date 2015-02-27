@@ -30,13 +30,20 @@ public class Main {
 		
 		// log.init();// initialisation du log avec valeur par defaut
 
-		Config.properties("a.properties",log2); // parametres du log depuis
-		Config.addCibleR(log2.classe, "a");
-		Config.addCibleR(log2.classe, "b");
+		//Config.properties("a.properties",log2); // parametres du log depuis
+		Config.addCible(log2.classe, "a");
+		Config.addCible(log2.classe, "b");
+		Config.addCibleR(log2.classe, "bs");
+		Config.addCibleR(log2.classe, "bsc");
+		
+		Config.suppCible(log2.classe, "bs");
+		Config.suppCibleR(log2.classe, "bs");
 		
 		// le fichier properties
+		System.out.println("cibles  de log2:"+log2.cibles);
 		System.out.println("cibles rotatives de log2:"+log2.ciblesR);
-		// System.out.println(log.messageDebug);
+		
+	     // System.out.println(log.messageDebug);
 		// System.out.println(log.messageError);
 		// System.out.println(log.messageInfo);
 		// System.out.println(F.getMessage());
