@@ -9,7 +9,7 @@ public class Main {
 
 		Logger log = Createur.getlog(Main.class); // creer un log
 		Config.level(log.classe, Level.DEBUG);
-		//Config.properties("test.properties",log);
+		Config.properties("test.properties",log);
 		Config.addCible(log.classe, "fichier.txt");
 		Config.addCibleR(log.classe, "fichierRotatif.txt");
 		log.show();
