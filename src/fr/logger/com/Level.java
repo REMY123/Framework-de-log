@@ -2,7 +2,7 @@ package fr.logger.com;
 
 //import java.util.Random;
 
-enum Level {
+public enum Level {
 	DEBUG(2), INFO(1), ERROR(0);
 	private final int value;
 
