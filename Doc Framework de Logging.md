@@ -14,10 +14,13 @@ logs, lui permettant de suivre la bonne progression de ses projets.
 
 ###Installation
 
-Pous installer notre Framework vous pouvez télécharger le dernier release ici : (lien)
+Pous installer notre Framework vous pouvez télécharger le dernier release ici : 
+
+[Release Framework de Log](https://github.com/REMY123/Framework-de-log/releases)
 
 Il vous faut télécharger le fichier .jar fourni.
 Une fois dans Eclipse, 
+
 
 * cliquez droit sur le nom de votre projet 
 * "Build Path"
