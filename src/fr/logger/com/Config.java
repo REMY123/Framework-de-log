@@ -18,36 +18,26 @@ public class Config {
 		Createur.getlog(classe).setLevel(level);
 	}
 
-	
-	
-	
-	
+	// supp cibles
+	public static void suppCible(Class<?> classe, String cible) {
+		Createur.getlog(classe).suppcibles(cible);
+	}
+
+	// supp cibles rotatives
+	public static void suppCibleR(Class<?> classe, String cible) {
+		Createur.getlog(classe).suppciblesR(cible);
+	}
+
 	// ajouter des cibles
 	public static void addCible(Class<?> classe, String cible) {
-
 		Createur.getlog(classe).setCible(cible);
 	}
-	
-	
+
 	// ajouter des cibles rotatives
-		public static void addCibleR(Class<?> classe, String cible) {
+	public static void addCibleR(Class<?> classe, String cible) {
 
-			Createur.getlog(classe).setCibleR(cible);
-		}
-		//supp cibles
-		public static void suppCible(Class<?> classe, String cible) {
-
-			Createur.getlog(classe).suppcibles(cible);
-			
-			
-				}
-		//supp cibles rotatives
-		public static void suppCibleR(Class<?> classe, String cible) {
-
-			Createur.getlog(classe).suppciblesR(cible);
-			
-			
-				}
+		Createur.getlog(classe).setCibleR(cible);
+	}
 
 	// définit un formateur
 	public static void formateur(Class<?> classe, Formateur formateur) {
@@ -65,6 +55,8 @@ public class Config {
 			FileInputStream in = new FileInputStream(fileName);
 			prop.load(in);
 
+			
+			
 			// recupere le level et le mets dans log
 			l = prop.getProperty("Level");
 			if (l != null) {
@@ -80,7 +72,6 @@ public class Config {
 
 			
 			
-			
 			// recup les cibles et les mets dans log
 			i = 1;
 			while (prop.getProperty("Cible" + i) != null) {
@@ -89,12 +80,14 @@ public class Config {
 			}
 
 			
+			
 			// recup les cibles rotatives et les mets dans log
-						i = 1;
-						while (prop.getProperty("RotatifCible" + i) != null) {
-							log.setCibleR(prop.getProperty("RotatifCible" + i));
-							i++;
-						}
+			i = 1;
+			while (prop.getProperty("RotatifCible" + i) != null) {
+				log.setCibleR(prop.getProperty("RotatifCible" + i));
+				i++;
+			}
+
 			
 			
 			// recup les messages et les mets dans log

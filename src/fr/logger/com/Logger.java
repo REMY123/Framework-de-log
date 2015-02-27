@@ -3,8 +3,9 @@ package fr.logger.com;
 import java.util.HashSet;
 import java.util.Iterator;
 
-
 public class Logger {
+	
+	
 	// Attributs
 	public Class<?> classe;
 	public Level level = Level.DEBUG;
@@ -33,6 +34,9 @@ public class Logger {
 		return classe;
 	}
 
+	
+	
+	
 	// Accessseurs
 	public String getMessageError() {
 		return this.messageLevel[0];
@@ -66,7 +70,7 @@ public class Logger {
 	public Level getLevel() {
 		return level;
 	}
-	
+
 	public void setCibleR(String cible) {
 
 		this.ciblesR.add(cible);
@@ -81,18 +85,22 @@ public class Logger {
 	}
 
 	public void suppcibles(String cible) {
-		 
+
 		this.cibles.remove(cible);
-		
-}
+
+	}
 
 	public void suppciblesR(String cible) {
 		this.ciblesR.remove(cible);
-		
+
 	}
-	
+
 	// //////////////////////////
 
+	
+	
+	
+	
 	public void error(String message) {
 		this.messageLevel[0] = message;
 
@@ -108,6 +116,9 @@ public class Logger {
 		this.messageLevel[2] = message;
 	}
 
+	
+	
+	
 	// lance l'ecriture dans les cible
 	public void show() {
 		int i;
@@ -118,7 +129,7 @@ public class Logger {
 		while (iter.hasNext()) {
 			String element = iter.next();
 
-			//ecrit dans la console
+			// ecrit dans la console
 			if (element.equals("Console")) {
 				for (i = level.getLevel(); i >= 0; i--) {
 					lev = level.getLevel(i);
@@ -127,7 +138,8 @@ public class Logger {
 				}
 			}
 
-			//ecrit dans les fichier 
+			
+			// ecrit dans les fichier
 			else {
 				for (i = level.getLevel(); i >= 0; i--) {
 					lev = level.getLevel(i);
@@ -138,10 +150,7 @@ public class Logger {
 			}
 
 		}
-		
-		
-		
-		
+
 		HashSet<String> R = this.ciblesR;
 		Iterator<String> iter1 = R.iterator();
 		while (iter1.hasNext()) {
@@ -149,14 +158,10 @@ public class Logger {
 			for (i = level.getLevel(); i >= 0; i--) {
 				lev = level.getLevel(i);
 				FichierRotatif.rotatif(
-						F.Formateur(this, this.messageLevel[i], lev),
-						element);
+						F.Formateur(this, this.messageLevel[i], lev), element);
 			}
-			
-			
+
 		}
-		
-		
 
 	}
 

@@ -15,7 +15,6 @@ public class FormateurDefault extends Formateur {
 		StringBuilder buildMessage = new StringBuilder();
 		buildMessage.append(mediumDateFormat.format(maintenant));
 		buildMessage.append(" [NAME=" + log.classe);
-		// System.out.println("Logger.class"+log.level);//////
 		buildMessage.append("   LEVEL=" + lev);
 		buildMessage.append("   MESSAGE=" + MSG);
 		buildMessage.append("]");

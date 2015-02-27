@@ -18,10 +18,6 @@ public class FileCible {
 			System.out.println("CIBLE: " + file + " NON VALIDE");
 		}
 
-		
-		
-		
-		
 		if (writer != null) {
 			try {
 

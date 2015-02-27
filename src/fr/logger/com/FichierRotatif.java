@@ -22,10 +22,10 @@ public class FichierRotatif {
 		String ligne;
 
 		try {
-			// Création du fichier
+			// Creation du fichier
 			fichier.createNewFile();
 
-			// Création du writer
+			// Creation du writer
 			FileWriter writer = new FileWriter(fichier, true);
 			try {
 				writer.write(message + "\n");
@@ -50,12 +50,12 @@ public class FichierRotatif {
 					long length = remp.length() - (remp.getFilePointer()); // on
 																			// saute
 																			// la
-																			// première
+																			// premiere
 																			// ligne.
 					byte[] suivant = new byte[(int) length];
 					remp.readFully(suivant); // lecture de toute la suite du
 												// fichier
-					remp.seek(0); // on repars au début
+					remp.seek(0); // on repars au debut
 					remp.write(suivant); // insertion d'une ligne
 					remp.setLength(suivant.length);
 					remp.close();
