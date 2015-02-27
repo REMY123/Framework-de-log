@@ -1,4 +1,4 @@
-#Framework de Logging
+#Doc Framework de Log
 
 #####Autheurs : [@REMY123](https://github.com/REMY123), [@bayakissa](https://github.com/bayakissa), [@hamza0208](https://github.com/hamza0208)
 
